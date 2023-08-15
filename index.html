@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<!-- 
+    things to fix/add in future:
+    - decrease the amount of things in navigation
+    - add cool animations for photography
+    - maybe combine skills and certifications
+    - add some animations to cover page
+        - lines moving under name, things typing
+-->
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -27,10 +35,10 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Certifications</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#photo-gallery">Photography</a></li>
                 </ul>
             </div>
@@ -151,7 +159,7 @@
             <!-- Skills-->
             <section class="resume-section" id="skills">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Skills</h2>
+                    <h2 class="mb-5">Skills & Awards</h2>
                     <div class="subheading mb-3">Programming Languages & Tools</div>
                     <ul class="list-inline dev-icons">
                         <li class="list-inline-item"><i class="fab fa-html5"></i></li>
@@ -167,6 +175,46 @@
                         <!-- <li class="list-inline-item"><i class="fab fa-grunt"></i></li>
                         <li class="list-inline-item"><i class="fab fa-npm"></i></li> -->
                     </ul>
+                    <div class="resume-section-content">
+                        <p> </p>
+                        <div class="subheading mb-3">Awards and Certifications</div>
+                        <ul class="fa-ul mb-0">
+                            <li>
+                                <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                                NVIDIA Getting Started with AI on Jetson Nano
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                                Google Certification on Coursera: GitHub
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                                2x President's List SJSU
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                                Silicon Valley Innovation Challenge Finalist
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                                Coursera Certification: Computer Vision 
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                                AP Scholar with Distinction
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Interests-->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Interests</h2>
+                    <p>Apart from being a software engineering, I enjoy spending time outdoors playing sports like basketball while also going on a run every now and then. Some hobbies I have picked up include rubix cubing and photography, stay tuned for photos 👀</p>
+                    <p class="mb-0">I love keeping up with the latest technologies ranging from the implementation of ML in VR headsets to microprocessors in noise cancelling headphones. Below I have listed some of my favorite aspects of software engineering: </p>
+                    <p> </p>
                     <div class="subheading mb-3">Fields</div>
                     <ul class="fa-ul mb-0">
                         <li>
@@ -189,45 +237,11 @@
                 </div>
             </section>
             <hr class="m-0" />
-            <!-- Interests-->
-            <section class="resume-section" id="interests">
+            <!-- Photography -->
+            <section class="resume-section" id="photo-gallery">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Interests</h2>
-                    <p>Apart from being a software engineering, I enjoy spending time outdoors playing sports like basketball while also going on a run every now and then. Some hobbies I have picked up include rubix cubing and photography, stay tuned for photos 👀</p>
-                    <p class="mb-0">I love keeping up with the latest technologies ranging from the implementation of ML in VR headsets to microprocessors in noise cancelling headphones.</p>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Awards-->
-            <section class="resume-section" id="awards">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Awards & Certifications</h2>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            NVIDIA Getting Started with AI on Jetson Nano
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Google Certification on Coursera: GitHub
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            2x President's List SJSU
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Silicon Valley Innovation Challenge Finalist
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Coursera Certification: Computer Vision 
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            AP Scholar with Distinction
-                        </li>
-                    </ul>
+                    <h2 class="mb-5">Photo Gallery</h2>
+                    <p class="lead mb-5"> Coming Soon 🚧 </p>
                 </div>
             </section>
         </div>
@@ -235,13 +249,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- Photography -->
-        <section class="resume-section" id="photo-gallery">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Photo Gallery</h2>
-                <h3>Coming Soon 🚧</h3>
-            </div>
-        </section>
+        
         <hr class="m-0" />
     </body>
 </html>
