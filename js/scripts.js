@@ -7,6 +7,21 @@
 // Scripts
 // 
 
+/* 
+$(document).on("scroll", function() {
+    var pageTop = $(document).scrollTop();
+    var pageBottom = pageTop + $(window).height();
+    var tags = $(".tag");
+  
+    for (var i = 0; i < tags.length; i++) {
+      var tag = tags[i];
+  
+      if ($(tag).position().top < pageBottom) {
+        $(tag).addClass("visible");
+      }
+    }
+}); FIXME */
+
 window.addEventListener('DOMContentLoaded', event => {
 
     // Activate Bootstrap scrollspy on the main nav element
@@ -30,5 +45,4 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
-
 });
