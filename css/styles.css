@@ -103,6 +103,17 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+.gif-container {
+  max-width: 3.50em;
+  display: inline-block;
+  line-height: 0; /* Ensures the image height matches the font size */
+}
+.gif-container img {
+  width: 100%; /* Sets the width of the image to match the font size */
+  height: auto; /* Sets the height of the image to match the font size */
+  vertical-align: middle; /* Aligns the image vertically within the line */
+}
 /* fade in transition FIXME
 .tag{
 }
