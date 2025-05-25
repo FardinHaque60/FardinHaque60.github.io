@@ -61,58 +61,12 @@
             <section class="resume-section" id="experience">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Experience</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Software Engineering Intern</h3>
-                            <div class="subheading mb-3">Google</div>
-                            <p> Gmail search </p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">May 2025 - August 2025</span></div>
+                    <!-- experiences are loaded from below script -->
+                    <div id="visibleExperiences">
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Research Assistant</h3>
-                            <div class="subheading mb-3">San Jose State University</div>
-                            <p> Comparing performance of PCA, Matrix Factorization, Autoencoders, and Singular Value Threshold on denoising genome data </p>
-                            <a href="https://carlosrojas.xyz/hic_compare_manuscript/" target="_blank"> manuscript </a>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2024 - April 2025</span></div>
+                    <div id="moreExperiences" style="display: none;">
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Software Engineering Intern</h3>
-                            <div class="subheading mb-3">Google</div>
-                            <p> Developed full-stack app using Java backend & Angular frontend as part of Slides AI model eval pipeline </p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">May 2024 - August 2024</span></div>
-                    </div>
-                    <!-- more experiences -->
-                    <div id="moreExperience" style="display: none;">
-                        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                            <div class="flex-grow-1">
-                                <h3 class="mb-0">Technology Intern</h3>
-                                <div class="subheading mb-3">Integem</div>
-                                <p> Trained image classification models on NVIDIA's Jetson Nano, constructed Raspberry Pi robots, and programmed in Python for AR game development </p>
-                            </div>
-                            <div class="flex-shrink-0"><span class="text-primary">May 2023 - August 2023</span></div>
-                        </div>
-                        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                            <div class="flex-grow-1">
-                                <h3 class="mb-0">Software Engineering Intern</h3>
-                                <div class="subheading mb-3">Utiltyx</div>
-                                <p> Implemented OpenCV and mathematical model detection pipeline to find electric poles in an image and calculate the angle they make with the ground with ~86% accuracy </p>
-                            </div>
-                            <div class="flex-shrink-0"><span class="text-primary">June 2022 - August 2022</span></div>
-                        </div>
-                        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                            <div class="flex-grow-1">
-                                <h3 class="mb-0">Data Analysis Intern</h3>
-                                <div class="subheading mb-3">NASA</div>
-                                <p> Conducted regression experiments using SciPy to predict the potential reduction in delays implementing a flight optimization program could offer </p>
-                            </div>
-                            <div class="flex-shrink-0"><span class="text-primary">June 2021 - August 2021</span></div>
-                        </div>
-                    </div>
+                    <script src="js/loadExperience.js"></script>
 
                     <!-- see more experience button -->
                     <div class="d-flex justify-content-center mb-4">
@@ -120,7 +74,7 @@
                     </div>
                     <script>
                     function toggleExperience() {
-                        const moreExp = document.getElementById('moreExperience');
+                        const moreExp = document.getElementById('moreExperiences');
                         const btn = document.getElementById('toggleExperienceBtn');
                         if (moreExp.style.display === 'none' || moreExp.style.display === '') {
                             moreExp.style.display = 'block';
@@ -137,142 +91,12 @@
             <section class="resume-section" id="projects">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Projects</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0"> <a href="https://github.com/FardinHaque60/Hoops" target="_blank"> Hoops</a> 🏀</h3>
-                            <div class="subheading mb-3">React Native, MongoDB</div>
-                                <div> 
-                                    <ul> 
-                                        <li> Coming Soon! </li>
-                                    </ul>
-                                </div>
-                            <p></p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary"></span></div>
+                    <!-- projects loaded with below script -->
+                    <div id="visibleProjects">
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0"> <a href="https://github.com/FardinHaque60/ParkPredict_Experiments" target="_blank"> ParkPredict</a> 🚗</h3>
-                            <div class="subheading mb-3">Data Engineering, Model Experiments</div>
-                                <div> 
-                                    <ul> 
-                                        <li> Coming Soon! </li>
-                                    </ul>
-                                </div>
-                            <p></p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary"></span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0"> <a href="https://github.com/cmpe195a-2024-25-group-9" target="_blank"> Vocast</a> 🎤 </h3>
-                            <div class="subheading mb-3"> Angular, FastAPI, WebSockets, ESP32 </div>
-                                <div> 
-                                    <ul> 
-                                        <li> In large classrooms it is often difficult to hear students, so this project utilizes students devices as a distributed microphone </li>
-                                        <li> IoT project with two parts: web interface and custom base station acting as an audio streaming server </li>
-                                        <li> Students use the website to join the professor's session where they can unmute to speak and the base station drives their voice to speakers in the class </li>
-                                    </ul>
-                                </div>
-                            <p></p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary"></span></div>
-                    </div>
-                    <!-- more projects -->
                     <div id="moreProjects" style="display: none;">
-                        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                            <div class="flex-grow-1">
-                                <h3 class="mb-0"> <a href="https://github.com/FardinHaque60/LikeHome" target="_blank"> LikeHome</a> 🛏️ </h3>
-                                <div class="subheading mb-3"> Angular, Django, SQLite3 </div>
-                                    <div> 
-                                        <ul> 
-                                            <li> <a href="https://hotels.com" target="_blank"> hotels.com</a> clone </li>
-                                            <li> Web app for booking hotels </li>
-                                            <li> Agentic chatbot capable of searching, adding hotels to users watchlist, and providing account information </li>
-                                        </ul>
-                                    </div>
-                                <p></p>
-                            </div>
-                            <div class="flex-shrink-0"><span class="text-primary"></span></div>
-                        </div>
-                        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                            <div class="flex-grow-1">
-                                <h3 class="mb-0"> <a href="https://github.com/FardinHaque60/Knits" target="_blank"> Knits</a> 🧶</h3>
-                                <div class="subheading mb-3">React Native, Springboot, mySQL</div>
-                                    <div> 
-                                        <ul> 
-                                            <li> Social media mobile app that offers users a neat way of organizing hangouts </li>
-                                            <li> Strategizing backend in Spring by representing users in a graph to provide recommendations efficiently </li>
-                                            <li> Provides map API for users to set-up rides and coordinate their location with a group </li>
-                                        </ul>
-                                    </div>
-                                <p></p>
-                            </div>
-                            <div class="flex-shrink-0"><span class="text-primary"></span></div>
-                        </div>
-                        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                            <div class="flex-grow-1">
-                                <h3 class="mb-0"> <a href="https://github.com/FardinHaque60/CareFULL" target="_blank"> CareFULL</a>⚕️</h3>
-                                <div class="subheading mb-3">React.js, Django, PostgreSQL</div>
-                                    <div> 
-                                        <ul> 
-                                            <li> Health-care application tailored to measuring trends using individuals bioinformation </li>
-                                            <li> Implementing backend using MVC and organizing queries to the database for accurate retrieval </li>
-                                            <li> Offers conversational chatbot using LLM that utilizes vectors to provide users insightful information regarding their
-                                                health statistics </li>
-                                        </ul>
-                                    </div>
-                                <p></p>
-                            </div>
-                            <div class="flex-shrink-0"><span class="text-primary"></span></div>
-                        </div>
-                        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                            <div class="flex-grow-1">
-                                <h3 class="mb-0"> <a href="https://github.com/FardinHaque60/Scribe" target="_blank"> Scribe </a> 🖋️</h3>
-                                <div class="subheading mb-3">Jinja, Flask, SQLAlchemy</div>
-                                    <div> 
-                                        <ul> 
-                                            <li> Notion clone using Flask framework </li>
-                                            <li> Managed a team of 2 others in organizing meetings, creating requirements, managing milestones, 
-                                                and creating a system for quality assurance when pushing changes to retain maintainability
-                                            </li>
-                                            <li> Utilized SQLAlchemy, Jinja Templates, Quill, and other libraries for frontend and backend  </li>
-                                        </ul>
-                                    </div>
-                                <p></p>
-                            </div>
-                            <div class="flex-shrink-0"><span class="text-primary"></span></div>
-                        </div>
-                        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                            <div class="flex-grow-1">
-                                <h3 class="mb-0"> <a href="https://github.com/FardinHaque60/Bug-Base" target="_blank"> Bug Base</a> 🐞</h3>
-                                <div class="subheading mb-3">FXML, JavaFX, SQLite </div>
-                                    <div> 
-                                        <ul> 
-                                            <li> Desktop based application to aid users organize bugs and enhancements in a single dashboard </li>
-                                            <li> Lead a team of 2 others to create a JavaFX project, identify classes, and develop UML diagrams, use cases, functional spec, and other client facing resources </li>
-                                            <li> Anchored backend and database development with SQLite implementation on users local machine </li>
-                                        </ul>
-                                    </div>
-                                <p></p>
-                            </div>
-                            <div class="flex-shrink-0"><span class="text-primary"></span></div>
-                        </div>
-                        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                            <div class="flex-grow-1">
-                                <h3 class="mb-0">23-Tree 🌳</h3>
-                                <div class="subheading mb-3">Java</div>
-                                    <div> 
-                                        <ul> 
-                                            <li> Self balancing tree program that can insert values and store them in a full binary tree </li>
-                                            <li> Optimized program to work on hundreds of thousands of values, providing runtimes &lt;500ms for insert, size, get, and find functions all running in, worst case, logarithmic time or less </li>
-                                        </ul>
-                                    </div>
-                                <p></p>
-                            </div>
-                            <div class="flex-shrink-0"><span class="text-primary"></span></div>
-                        </div>
                     </div>
+                    <script src="js/loadProjects.js"></script>
 
                      <!-- See More Toggle Button -->
                     <div class="d-flex justify-content-center mb-4">
