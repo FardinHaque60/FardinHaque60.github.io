@@ -3,7 +3,7 @@ const expData = [
     {
         role: "Software Engineering Intern",
         company: "Google",
-        description: "Gmail search",
+        description: "Adding search features for encrypted emails on Gmail Web",
         dates: "May 2025 - August 2025"
     },
     {

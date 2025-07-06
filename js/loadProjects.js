@@ -5,15 +5,21 @@ const projData = [
         name: "Hoops",
         emoji: "🏀",
         tools: "React Native, MongoDB",
-        description: ["Coming Soon!"],
+        description: [
+            "Full stack mobile app for pick-up basketball players to easily track stats and make teams",
+            "Includes web data dashboard to view trends, recommendations, compute stats from cloud database"
+        ],
         dates: "Present"
     },
     {
         link: "https://github.com/FardinHaque60/ParkPredict_Experiments",
         name: "ParkPredict",
         emoji: "🚗",
-        tools: "Data Engineering, Model Experiments",
-        description: ["Coming Soon!"],
+        tools: "React + Vite, Django, Data Engineering, Model Experiments",
+        description: [
+            "Pre-trained prediction model for SJSU parking garage fullness given a time input to help commuters find a spot",
+            "Conducted model experiments between regression functions, GAM, KNN using r^2 as validation measure",
+        ],
         dates: "Present"
     },
     {
