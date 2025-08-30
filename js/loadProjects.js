@@ -1,26 +1,15 @@
 // add another entry following the format
 const projData = [
     {
-        link: "https://github.com/FardinHaque60/Hoops",
-        name: "Hoops",
-        emoji: "🏀",
-        tools: "React Native, MongoDB",
-        description: [
-            "Full stack mobile app for pick-up basketball players to easily track stats and make teams",
-            "Includes web data dashboard to view trends, recommendations, compute stats from cloud database"
-        ],
-        dates: "Present"
-    },
-    {
-        link: "https://github.com/FardinHaque60/ParkPredict_Experiments",
+        link: "https://sjsuparkpredict.vercel.app/",
         name: "ParkPredict",
         emoji: "🚗",
-        tools: "React + Vite, Django, Data Engineering, Model Experiments",
+        tools: "React + Vite, FastAPI, Data Engineering, Model Experiments",
         description: [
             "Pre-trained prediction model for SJSU parking garage fullness given a time input to help commuters find a spot",
             "Conducted model experiments between regression functions, GAM, KNN using r^2 as validation measure",
         ],
-        dates: "Present"
+        dates: "January 2025 - September 2025"
     },
     {
         link: "https://github.com/cmpe195a-2024-25-group-9",
