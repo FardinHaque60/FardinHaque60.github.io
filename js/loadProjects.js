@@ -7,7 +7,7 @@ const projData = [
         tools: "React + Vite, FastAPI, Data Engineering, Model Experiments",
         description: [
             "Pre-trained prediction model for SJSU parking garage fullness given a time input to help commuters find a spot",
-            "Conducted model experiments between regression functions, GAM, KNN using r^2 as validation measure",
+            "Conducted model experiments between regression functions, GAM, KNN using r² as validation measure",
         ],
         dates: "January 2025 - September 2025"
     },

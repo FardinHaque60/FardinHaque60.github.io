@@ -2,6 +2,13 @@
 const expData = [
     {
         role: "Software Engineering Intern",
+        company: "NVIDIA",
+        description: "Incoming Summer 2026 on " + 
+            "<a href=\"https://developer.nvidia.com/industries/telecommunications/ai-aerial\" target=\"blank\"> Aerial Platforms Team </a>",
+        dates: "June 2026 - September 2026"
+    },
+    {
+        role: "Software Engineering Intern",
         company: "Google",
         description: "Adding search features for encrypted emails on Gmail Web",
         dates: "May 2025 - August 2025"
@@ -9,7 +16,8 @@ const expData = [
     {
         role: "Research Assistant",
         company: "San Jose State University",
-        description: "Comparing performance of PCA, Matrix Factorization, Autoencoders, and Singular Value Threshold on denoising genome data. manuscript: https://carlosrojas.xyz/hic_compare_manuscript/",
+        description: "Comparing performance of PCA, Matrix Factorization, Autoencoders, and Singular Value Threshold on denoising genome data " +
+            "<br></br><a href=\"http://hdl.handle.net/20.500.12680/2r36v736v\" target=\"_blank\"> Manuscript </a>",
         dates: "August 2024 - April 2025"
     },
     {
@@ -62,7 +70,7 @@ for (let i = 0; i < expData.length; i++) {
     expComp.classList.add('mb-3');
     expComp.textContent = expData[i].company;
     const expDesc = document.createElement('p');
-    expDesc.textContent = expData[i].description;
+    expDesc.innerHTML = expData[i].description; // can handle html text like <a> tags
     expInfo.appendChild(expHeader); expInfo.appendChild(expComp); expInfo.appendChild(expDesc);
 
     const expDates = document.createElement('div');
