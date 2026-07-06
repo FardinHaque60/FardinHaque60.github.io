@@ -3,8 +3,7 @@ const expData = [
     {
         role: "Software Engineering Intern",
         company: "NVIDIA",
-        description: "Incoming Summer 2026 on " + 
-            "<a href=\"https://developer.nvidia.com/industries/telecommunications/ai-aerial\" target=\"blank\"> Aerial Platforms Team </a>",
+        description: "GPU Optimization on <a href=\"https://docs.nvidia.com/aerial/framework/latest/\" target=\"blank\"> Aerial Framework </a>",
         dates: "June 2026 - September 2026"
     },
     {
