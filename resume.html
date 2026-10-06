@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fardin Haque - Resume</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/tab_icon.ico" />
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f7f9fa;
+        }
+        #loading {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #555;
+        }
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-top-color: #007aff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 15px;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        /* Crucial styles for seamless full-screen layout container on mobile */
+        .pdf-container {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            -webkit-overflow-scrolling: touch;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading">
+        <div class="spinner"></div>
+        <div>Loading Resume...</div>
+    </div>
+    <script>
+        // Google Doc export link for PDF
+        const GOOGLE_DOC_PDF_URL = 'https://docs.google.com/document/d/1EA2CPSRLBolV4EJClc-S-cRdwkgRys8AE7byPHp8oTI/export?format=pdf';
+
+        async function embedPdf() {
+            try {
+                // 1. Fetch live snapshot from Google Docs
+                const response = await fetch(GOOGLE_DOC_PDF_URL);
+                if (!response.ok) throw new Error('Failed to fetch');
+                const blob = await response.blob();
+                
+                // 2. Force it into an application/pdf MIME type
+                const pdfBlob = new Blob([blob], { type: 'application/pdf' });
+                const cleanPdfUrl = URL.createObjectURL(pdfBlob);
+                
+                // 3. Create an <object> container which behaves better than an iframe on mobile
+                const obj = document.createElement('object');
+                obj.data = cleanPdfUrl;
+                obj.type = 'application/pdf';
+                obj.className = 'pdf-container';
+                
+                // Fallback button inside the object wrapper for strict mobile edge cases
+                obj.innerHTML = `<p style="padding:20px; text-align:center;">
+                    Your browser doesn't support inline PDFs. <br><br>
+                    <a href="${GOOGLE_DOC_PDF_URL}" style="color:#007aff; text-decoration:none; font-weight:bold;">Click here to download directly</a>
+                </p>`;
+                
+                // 4. Clean up UI: Remove loading animation and mount the PDF natively
+                document.getElementById('loading').style.display = 'none';
+                document.body.appendChild(obj);
+            } catch (error) {
+                console.error(error);
+                document.getElementById('loading').innerHTML = `
+                    <p style="text-align:center; padding:20px;">
+                        Failed to fetch live resume. <br><br>
+                        <a href="${GOOGLE_DOC_PDF_URL}" style="color:#007aff; text-decoration:none; font-weight:bold;">Click here to download directly</a>
+                    </p>`;
+            }
+        }
+
+        // Initialize immediately
+        embedPdf();
+    </script>
+</body>
+</html>
